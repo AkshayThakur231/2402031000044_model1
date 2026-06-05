@@ -16,7 +16,7 @@ require("./db/user");
         res.send(result);
     });
 
-    app.post("/Show_users", async (req, res) => {
+    app.get("/Show_users", async (req, res) => {
         const users = await user_model.find();
         res.json(users);
     });
